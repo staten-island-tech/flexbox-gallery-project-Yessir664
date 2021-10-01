@@ -8,11 +8,11 @@ body{
 }
 
 img{
-    box-shadow: 5px 5px 10px white;
+    box-shadow: 5px 5px 20px white;
     width: 32%;
-    padding: 12px;
-    max-height:600px;
-    max-width: 600px;
+    margin: 12px;
+    margin-bottom: 20px;
+    max-height: 600px;
 }
 
 .title{

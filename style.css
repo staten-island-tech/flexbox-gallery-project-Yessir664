@@ -10,9 +10,9 @@ body{
 img{
     box-shadow: 5px 5px 20px white;
     width: 30%;
+    height: auto;
     margin: 12px;
     margin-bottom: 20px;
-    max-height: 550px;
 }
 
 .title{

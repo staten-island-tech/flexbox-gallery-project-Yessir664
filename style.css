@@ -9,9 +9,17 @@ body{
 
 img{
     box-shadow: 5px 5px 20px white;
-    width: 30%;
-    margin: 20px;
-    max-height: 550px;
+    width: 28%;
+    margin: 30px;
+    margin-bottom: 60px;
+    max-height: 500px;
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition-timing-function: ease-in;
+    transition: 0.5s;
+    box-shadow: 5px 5px 30px white;
 }
 
 .title{

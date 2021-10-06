@@ -17,7 +17,6 @@ img{
 
 img:hover {
     transform: scale(1.1);
-    transition-timing-function: ease-in;
     transition: 0.5s;
     box-shadow: 5px 5px 30px white;
 }
@@ -27,4 +26,10 @@ img:hover {
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 7em;
     text-align: center;
+}
+
+.logo{
+    position: absolute;
+    top: 80px;
+    right: 0px;
 }

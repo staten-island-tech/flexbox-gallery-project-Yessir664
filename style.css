@@ -42,9 +42,7 @@ h2{
     font-size: 8vw;
     text-align: center;
 }
-
 .logo{
-    position: absolute;
-    top: 80px;
-    right: 0px;
+    width: 10%;
+    margin-right: 0px;
 }

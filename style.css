@@ -6,9 +6,9 @@ body, html, *{
 }
 body{
     background-color: #1D1B1B;
-    overflow: hidden;
     animation: rattle 0.2s;
     animation-delay: 1s;
+    overflow-x: hidden;
 }
 h2{
     color: white;
@@ -23,6 +23,23 @@ h2{
     margin: 20px auto;
     width: 90vw;
 }
+main{
+    opacity: 0;
+    position: relative;
+    animation: show 2s none 5s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{opacity: 1}
+}
  @keyframes left{
      from{left: -10%; top: 0px;}
      to{left: 90%; top: 0px;}
@@ -34,7 +51,7 @@ h2{
 }
 
 @keyframes title{
-    from{top: -20%;}
+    from{top: -40%;}
     to{top: 0%;}
 }
 .image-con{
@@ -56,10 +73,11 @@ h2{
     position: relative;
     color:#EC4D37;
     font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 8vw;
+    font-size: 10vw;
     text-align: center;
     animation-name: title;
     animation-duration: 2s;
+    animation-delay: 5s;
 }
 .leg-right{
     width: 10%;
@@ -103,9 +121,11 @@ h2{
 }
 
 @keyframes move{
-    from{}
+    from{right: 0px;}
     to{
-        right: -20%;
+        right: -3000px;
+        opacity: 0;
+        display: none;
     }
 }
 @keyframes rattle
@@ -124,18 +144,19 @@ h2{
 }
 .slam
 {
-  animation: slam 1s;
-  animation-timing-function: ease-in;
+  animation: slam 1s ease-in, move 3s none 5s;
   color: #C41818;
   display: block;
-  font-size: 13em;
+  font-size: 5vw;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
-  position: absolute;
+  position: relative;
+  top: 40%;
   text-align: center;
   text-transform: uppercase;
-}
-
-#slam{
-    animation: move 1s;
-    animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }

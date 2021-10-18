@@ -49,10 +49,12 @@ main{
     from{right: -10%; top: 0px;}
     to{right: 90%; top: 0px;}
 }
-
 @keyframes title{
-    from{top: -40%;}
-    to{top: 0%;}
+    from{top: -600px;}
+    to{
+        top: -60px;
+    }
+
 }
 .image-con{
     width: 30%;
@@ -75,9 +77,8 @@ main{
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 10vw;
     text-align: center;
-    animation-name: title;
-    animation-duration: 2s;
-    animation-delay: 5s;
+    top: -60px;
+    animation: title 2s none 5s;
 }
 .leg-right{
     width: 10%;
@@ -159,4 +160,16 @@ main{
     -ms-animation-fill-mode: forwards;
     -o-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+}
+
+@media (min-height: 1024px) {
+    .title{
+        top: -20px;
+    }
+    @keyframes title{
+        from{top: -600px;}
+        to{
+            top: -20px;
+        }
+    }
 }

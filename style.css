@@ -162,7 +162,7 @@ main{
     animation-fill-mode: forwards;
 }
 
-@media (max-height: 1024px) {
+@media (max-height: 1366px) {
     .title{
         top: -20px;
     }

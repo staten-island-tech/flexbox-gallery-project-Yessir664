@@ -28,7 +28,7 @@ h2{
 main{
     opacity: 0;
     position: relative;
-    animation: show 2s none 5s;
+    animation: show 2s none 6s;
     -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
     -ms-animation-fill-mode: forwards;
@@ -80,7 +80,7 @@ main{
     font-size: 10vw;
     text-align: center;
     top: -60px;
-    animation: title 2s none 5s;
+    animation: title 2s none 6s;
 }
 .leg-right{
     width: 10%;
@@ -90,7 +90,7 @@ main{
     animation-name: right;
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
-    animation-delay: 5s;
+    animation-delay: 6s;
 }
 .leg-left{
     left: 0px;
@@ -100,13 +100,14 @@ main{
     animation-name: left;
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
-    animation-delay: 5s;
+    animation-delay: 6s;
 }
 
 @keyframes slam
 {
   0%
   {
+    overflow-y: hidden;
     transform: scale(10, 10);
     opacity: 0;
   }
@@ -129,6 +130,7 @@ main{
         right: -1000px;
         opacity: 0;
         display: none;
+        overflow-y: scroll;
     }
 }
 @keyframes rattle
@@ -150,7 +152,7 @@ main{
   animation: slam 1s ease-in, move 3s none 5s;
   color: #C41818;
   display: block;
-  font-size: 5vw;
+  font-size: 9vw;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
   position: relative;
@@ -166,12 +168,12 @@ main{
 
 @media (max-height: 1366px) {
     .title{
-        top: -20px;
+        top: 0px;
     }
     @keyframes title{
         from{top: -600px;}
         to{
-            top: -20px;
+            top: 0px;
         }
     }
 }

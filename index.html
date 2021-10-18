@@ -51,6 +51,14 @@
                     <h2>Whole Roast Chicken</h2>
                 </div>
         </main>
-        </div>
+        <script>
+            var slam = document.getElementById('slam');
+            var logMe = function () {
+                slam.parentNode.removeChild(slam);
+            };
+
+            setTimeout(logMe, 6500);
+            
+        </script>
     </body>
 </html>

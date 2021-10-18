@@ -163,10 +163,7 @@ main{
 }
 
 @media (max-height: 1366px) {
-    body{
-        background-color: #1D1B1B;
-        animation: rattle 0.2s;
-        animation-delay: 1s;
+    *{
         overflow-x: hidden;
     }
     .title{

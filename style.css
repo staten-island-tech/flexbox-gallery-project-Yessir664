@@ -6,12 +6,19 @@ body, html, *{
 }
 *{
     overflow-x: hidden;
+    overflow-y: hidden;
+    animation: overflow 20s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 body{
     background-color: #1D1B1B;
     animation: rattle 0.2s;
     animation-delay: 1s;
-    overflow-y: scroll;
+    
 }
 h2{
     color: white;
@@ -29,12 +36,16 @@ h2{
 main{
     opacity: 0;
     position: relative;
-    animation: show 2s none 6s;
+    animation: show 2s none 7s;
     -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
     -ms-animation-fill-mode: forwards;
     -o-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+}
+@keyframes overflow{
+    from{overflow-y: hidden;}
+    to{overflow-y: visible;}
 }
 @keyframes show{
     from{
@@ -60,16 +71,12 @@ main{
 .image-con{
     width: 30%;
     margin-bottom: 60px;
+    margin: 20px;
 }
 
 .image{
     box-shadow: 5px 5px 20px white;
     width: 100%;
-}
-
-.image-con:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
 }
 
 .title{
@@ -90,6 +97,7 @@ main{
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
     animation-delay: 6s;
+    transition: transform .7s ease-in-out;
 }
 .leg-left{
     left: 0px;
@@ -100,8 +108,18 @@ main{
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
     animation-delay: 6s;
+    transition: transform .7s ease-in-out;
 }
 
+.leg-left:hover{
+  transform: rotate(360deg);
+}
+.leg-right:hover{
+    transform: rotate(360deg);
+}
+.title:hover{
+    color: white;
+}
 @keyframes slam
 {
   0%
@@ -163,6 +181,36 @@ main{
     animation-fill-mode: forwards;
 }
 
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    40% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+  
+    80% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+  }
+.first:hover{
+    animation: bounce 1s;
+}
+.second:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.third{
+    opacity: 0.8;
+}
+.third:hover{
+    opacity: 1;
+    transition: 1s;
+}
 @media (max-height: 1366px) {
     .title{
         top: 0px;
@@ -184,5 +232,11 @@ main{
         to{
             top: 0px;
         }
+    }
+    .image{
+        box-shadow: 5px 5px 10px white;
+    }
+    .image-con{
+        margin-bottom: 20px;
     }
 }

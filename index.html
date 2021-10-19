@@ -14,50 +14,58 @@
         <main>
             <div class="title"><span><img src="images/fried-chicken-drum.gif" class="leg-left"></span>Chicken<span><img src="images/fried-chicken-drum.gif" class="leg-right"></span></div>
             <div class="container">
-                <div class="image-con">
+                <div class="first image-con">
                     <img src="images/best-grilled-chicken.jpg" class="image">
                     <h2>Grilled Chicken</h2>
                 </div>
-                <div class="image-con">
+                <div class="first image-con">
                     <img src="images/chicken-drum.jpeg" class="image">
                     <h2>Chicken Drum</h2>
                 </div>
-                <div class="image-con">
+                <div class="first image-con">
                     <img src="images/cornflake-crusted-baked-chicken.jpg" class="image">
                     <h2>Cornflake Crusted Baked Chicken</h2>
                 </div>
-                <div class="image-con">
+                <div class="second image-con">
                     <img src="images/fried-chicken.jpg" class="image">
                     <h2>Fried Chicken</h2>
                 </div>
-                <div class="image-con">
+                <div class="second image-con">
                     <img src="images/garlicbutterchicken.jpg" class="image">
                     <h2>Garlic butter chicken</h2>
                 </div>
-                <div class="image-con">
+                <div class="second image-con">
                     <img src="images/raw-chicken.jpg" class="image">
                     <h2>Raw Chicken</h2>
                 </div>
-                <div class="image-con">
+                <div class="third image-con">
                     <img src="images/santa-fe-baked-chicken.jpg" class="image">
                     <h2>Santa Fe baked chicken</h2>
                 </div>
-                <div class="image-con">
+                <div class="third image-con">
                     <img src="images/sesame-chicken.jpg" class="image">
                     <h2>Sesame Chicken</h2>
                 </div>
-                <div class="image-con">
+                <div class="third image-con">
                     <img src="images/Whole-Roast-Chicken.jpg" class="image">
                     <h2>Whole Roast Chicken</h2>
                 </div>
         </main>
         <script>
+            var scrollup = function () {
+                window.scrollTo(0,0);
+            };
+            window.onbeforeunload = function () {
+                window.scrollTo(0,0);
+            };
+            setTimeout(scrollup, 500);
             var slam = document.getElementById('slam');
-            var logMe = function () {
+            var slam_remove = function () {
                 slam.parentNode.removeChild(slam);
+                window.scrollTo(0,0);
             };
 
-            setTimeout(logMe, 6500);
+            setTimeout(slam_remove, 6500);
             
         </script>
     </body>
